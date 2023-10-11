@@ -1,0 +1,36 @@
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt-get install apache2 -y
+sudo apt-get install mysql-server -y
+sudo apt install php libapache2-mod-php php-mysql
+sudo apt install phpmyadmin -y
+sudo -i
+mysql -u root -p
+create user 'anderson'@'localhost' identified by '347988'
+grant all privileges on . to 'anderson'@'localhost' with grant option;
+flush privileges;
+exit
+sudo a2enconf phpmyadmin
+show databases;
+CREATE DATABASE serverlamp;
+show databases;
+exit
+exit
+
+cd /var/www/html
+sudo nano add.html
+sudo nano add.php
+sudo nano config.php
+sudo nano delete.php
+sudo nano edit.php
+sudo nano index.php
+
+sudo apt install git
+
+   sudo nano config.php
+
+   en las ultimas 2 lineas donde nos saldra ("lamp_user") va nuestro usuario en mi caso es Villarlamp 
+   y en la contraseña que nos aparecera ("lamp_password) va nuestro contraseña que es "villar145"
+   y eso seria todo.
+
+   ¡Gracias!
