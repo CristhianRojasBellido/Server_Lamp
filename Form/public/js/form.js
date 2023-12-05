@@ -35,9 +35,10 @@ formulario.addEventListener('submit', function(event) {
         return;
     }
 
-    // Restricciones para el correo electrónico: debe ser un correo institucional válido de Vallegrande
-    if (!correo.endsWith('@vallegrande.edu.pe')) {
-        alert('Ingresa un correo institucional válido de Vallegrande.');
+    // Restricciones para el correo electrónico: debe ser un formato de correo válido
+    const formatoCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formatoCorreoValido.test(correo)) {
+        alert('Ingresa un correo electrónico válido.');
         return;
     }
 
